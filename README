@@ -1,0 +1,37 @@
+submatch
+
+Character substitution matcher.
+
+Usage: submatch <pattern> <file
+
+Pattern example:
+   ABCA
+matches:
+  'that' (A=t, B=h, C=a)
+  'else' (A=e, B=l, C=s)
+  'elle' (A=e, B=l, C=l too)
+but not:
+  'roam' (multiple values for A)
+  'ellen' (too long)
+
+Example:
+
+  $ cat words
+  that
+  else
+  elle
+  ellen
+  roam
+
+  $ submatch ABCA <words
+  that
+  else
+  elle
+   
+Input lines are printed if matched, skipped if not.
+
+Building:
+
+  make submatch
+
+By Sijmen Mulder <ik@sjmulder.nl>
