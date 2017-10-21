@@ -2,9 +2,8 @@ submatch
 
 Character substitution matcher.
 
-Usage: submatch <pattern> <file
+Usage: submatch PATTERN <file
 
-Pattern example:
    ABCA
 matches:
   'that' (A=t, B=h, C=a)
